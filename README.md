@@ -65,3 +65,29 @@ Broadcast는 일반적으로 하나의 송출자가 다수의 수신자에게 �
 ```
 socket.broadcast.emit("user_connected", username)
 ```
+
+## Chat DB 설계
+
+### sockets.model
+
+```
+{
+  _id: fskldfjksljfk31356d(ObjectId),
+  id: socket.id,
+  username: 사용자 이름
+}
+```
+
+### chattings.model
+
+```
+{
+  _id: 1231561hf45648u,
+  user: {
+    _id: fskldfjksljfk31356d(ObjectId),
+    id: socket.id,
+    username: 사용자 이름
+  },
+  chat: 채팅 메세지
+}
+```
